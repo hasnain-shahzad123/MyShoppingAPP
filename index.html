@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <!-- //making a div for navBar -->
+
+    <nav class="NavBar">
+      <div class="shoppingBag">
+      <li>
+        <span><i class="bi bi-basket"></i></span>
+        <span><input type="text" name="" id="proInput" value="0" readonly></span>
+      </li>
+      <div id="SideBar">
+        <h4>Your Cart</h4>
+        <button type="button" class="btn btn-dark btn-lg" id="ContinueButton">Continue Shopping</button>
+        <h4>Total Price: <input type="text" id="priceInput" value="0" readonly></h4>
+        <!-- <div class="side">
+        <div id="cartBox">
+          <img src="css/Bag01.jpg" alt="">
+          <p>name of the product <br> price</p>
+          <i class="bi bi-x"></i>
+        </div> -->
+      </div>
+      </div>
+    </div>
+
+    <div class="CompanyLogo">
+      <li>
+        <img src="css/logo.png" alt="" id="companyL">
+      </li>
+    </div>
+     
+    <!-- ending of navBar -->
+    </nav>
+  
+        <!-- Bootstrap Carousel -->
+
+
+        <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <img src="css/fullImage.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+              <img src="css/menShirts.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="css/mensShalwarKameez.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- Images  -->
+
+        <div class="trendingImages">
+          <div class="images"><img src="css/Ethnic.webp" alt="">
+          <p>Ethnic</p></div>
+          <div class="images"><img src="css/shirts.webp" alt="">.
+          <p>Shirts</p></div>
+          <div class="images"><img src="css/t-shirts and polos.webp" alt="">
+          <p>t-Shirts</p></div>
+          <div class="images"><img src="css/Trouser && jeans.webp" alt="">
+          <p>Jeans</p></div>
+          <div class="images"><img src="css/Accessories.webp" alt="">
+          <p>Accessories</p></div>
+        </div>
+
+
+        <!-- Products and Their Description -->
+
+
+        <div class="elements">
+        <!-- <div class="products">
+        <img src='css/Bag01.jpg' alt="image" class="productImages">
+        <div class="itemName">
+          <h5>Bag</h5>
+          <span class="lineThrough">2,199 pkr</span>
+          <span>1,099</span>
+          <span class="bag-icon"><button class="fa-sharp btn"><span>Add to Cart</span></button></span>
+          <div class="sizes">
+            <h6>XS</h6>
+            <h6>S </h6>
+            <h6>M </h6>
+            <h6>L </h6>
+          </div>
+        </div>
+
+          </div> -->
+        </div>
+
+        <!-- //image -->
+        <div class="fullImage">
+          <img src="css/mensShalwarKameez.webp" alt="" class="img-fluid mt-5">
+        </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="javaScrpt/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(191, 200, 200);
+    height: 50px;
+    width:100%;
+    position: fixed;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+.NavBar li{
+   list-style: none;
+}
+#companyL{
+    width: 50px;
+    height: 30px;
+    margin-right: 100px;
+    position: relative;
+    top: 9px;
+}
+.bi{
+    font-size: 30px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.bi:hover{
+    color: cadetblue;
+}
+
+#proInput{
+    height: 25px;
+    padding: 10px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    background-color:black;
+    border: none;
+    position: relative;
+    outline: none;
+    bottom: 17px;
+    left: -10px;
+}
+
+/* Side Bar styling */
+
+#SideBar{
+    background-color: gray;
+    /* height: 100vh; */
+    overflow: auto;
+    position: relative;
+    top: 5px;
+    z-index: 1;
+    animation: fade-in-out 0.6s ease-in-out
+}
+#SideBar.active{
+    animation: slide-in 0.6s ease-in-out;
+
+}
+#SideBar:not(.active){
+    animation: slide-out ease-in-out  forwards;
+    pointer-events: auto;
+}
+
+@keyframes slide-in {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slide-out {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(35, 35, 35, 0.8);;
+    display: none;
+    animation: fade-in-out 0.6s ease-in-out;
+    z-index: 999; 
+}
+@keyframes fade-in-out {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 3;
+    }
+}
+
+#priceInput{
+    width: 90px;
+    border: none;
+    outline: none;
+    position: relative;
+    background-color: gray;
+}
+
+
+
+
+
+
+/* styling Trending Images */
+
+.trendingImages{
+    margin-top: 45px;
+    /* margin-left: 10px; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.trendingImages img{
+    
+    height: 230px;
+    width: 230px;
+}
+.trendingImages p{
+    margin-left: 90px;
+    padding-top: 30px;
+}
+
+
+
+
+.elements{
+    margin: 40px;
+    padding-bottom:100px ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.products{
+    height: 300px;
+    width: 250px;
+    background-color: rgb(224, 231, 231);
+    margin: 60px;
+    margin-bottom: 130px;
+}
+.products:hover{
+    /* transform: translate(5px,5px); */
+    transition: 0.3s;
+    transform: translate(5px,5px);
+    filter: brightness(100px);
+} 
+.productImages{
+    height: 300px;
+    width: 250px;
+    overflow: hidden;
+}
+.lineThrough{
+    text-decoration: line-through;
+}
+.sizes{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.sizes h6{
+    margin-left: -30px;
+    border: 0.5px solid rgb(203, 174, 174);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+}
+.sizes h6:hover{
+   background-color: black;
+   color: white;  
+}
+.fa-sharp{
+    position: relative;
+    left: 70px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+ }
+ .fa-sharp:active{
+     background-color: blue;
+ }
+ .button_text{
+     font: bold;
+     transition: all 0.2s;
+ }
+ .button--loading .button_text{
+     visibility: hidden;
+     opacity: 0;
+ }
+ .button--loading::after{
+     content: "";
+     position: absolute;
+     height: 19px;
+     width: 19px;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     top: 0;
+     margin: auto;
+     border: 4px solid transparent;
+     border-top-color: white;
+     border-radius: 50%;
+     animation: loading-spinner 1s ease infinite;
+ }
+ @keyframes loading-spinner {
+     from{
+         transform: rotate(0turn);
+     }
+     to{
+         transform: rotate(1turn);
+     }
+ 
+ }
+ 
+
+/* styling Side Side Bar */
+#SideBar h4{
+    text-align: center;
+    padding-top: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+#SideBar button{
+    margin-left: 50px;
+    margin-top: 30px;
+    border-radius: 0px !important;
+    margin-bottom: 10px;
+}
+
+/* side Bar Cart */
+#cartBox{
+    display: flex;
+    background-color: khaki;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+#cartBox img{
+    height: 50px;
+    width: 50px;
+}
+#cartBox p{
+    margin-left: 20px;
+    text-align: center;
+}
+#cartBox i{
+    color: rgb(29, 28, 28);
+}
+#cartBox i:hover{
+    color: red;
+    cursor: pointer;
+}
+.side{
+    margin-top: 0px;
+    margin-bottom:50px ;
+}
