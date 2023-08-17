@@ -276,12 +276,18 @@ body{
     margin-bottom:50px ;
 }
 
-/* footer */
-.footer-ul{
-    list-style: none;
-    cursor: pointer;
+.fa-brands{
+    color: black;
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
 }
-.footer-ul li{
-    line-height: 40px;
-    
+.fa-solid{
+    text-decoration: none;
+    color: black;
+    margin-left: 0px;
+    position: relative;
+    bottom: 3px;
+    font-size: 20px;
 }
