@@ -275,3 +275,13 @@ body{
     margin-top: 0px;
     margin-bottom:50px ;
 }
+
+/* footer */
+.footer-ul{
+    list-style: none;
+    cursor: pointer;
+}
+.footer-ul li{
+    line-height: 40px;
+    
+}
