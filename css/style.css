@@ -87,6 +87,32 @@ body{
         transform: translateX(-100%);
     }
 }
+.search{
+    padding-top: 7px;
+    position: relative;
+    left: -50px;
+}
+.search input{
+    border-radius: 15px;
+    border: none;
+    padding: 5px;
+    outline: none;
+    padding-left: 9px;
+    background-color: rgb(255, 253, 251);
+}
+.search button{
+    border: none;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+}
+.search button:active{
+    background-color: rgb(169, 169, 249);
+}
 .overlay{
     position: fixed;
     top: 0;
@@ -276,18 +302,21 @@ body{
     margin-bottom:50px ;
 }
 
-.fa-brands{
-    color: black;
+.profile-icon{
+    color: white;
+    text-decoration: none;
     font-size: 30px;
     padding-bottom: 5px;
     margin-left: 10px;
     margin-right: 20px;
+    
 }
-.fa-solid{
+.leetCode{
     text-decoration: none;
-    color: black;
+    color: white;
     margin-left: 0px;
     position: relative;
     bottom: 3px;
     font-size: 20px;
+   
 }

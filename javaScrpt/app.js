@@ -213,3 +213,51 @@ bagIcon.forEach((Element)=>{
         displayCarts(Imagedata,simpleData,price)
     })
 })
+
+//implementation of search function 
+
+function search(productName,InputKey){
+    productName=productName.toLowerCase()
+    InputKey=InputKey.toLowerCase();
+    let productIndex=0
+    for(let i=0;i<InputKey.length;i++){
+        if(productName[productIndex]===InputKey[i]){
+            productIndex++;
+        }
+        if(productIndex==InputKey.length){
+            return true;
+        }
+    }
+    return false;
+}
+
+
+
+
+//Adding a functionality to search a product
+let searchProduct=document.querySelector('#searchProduct')
+let searchButton=document.querySelector('#searchButton')
+const product=document.querySelectorAll('.products')
+searchButton.addEventListener('click',()=>{
+        let val=searchProduct.value;
+        product.forEach((Element)=>{
+        let item=Element.querySelector('.itemName').firstElementChild.textContent
+        let shouldDisplay=search(item,val)
+        if(shouldDisplay){
+        Element.style.display='block';
+        }
+        else{
+        Element.style.display='none'; 
+        }
+        
+        })
+})
+searchProduct.addEventListener('keyup',(event)=>{
+    console.log('hello')
+    if(event.keyCode===8 && document.querySelector('#searchProduct').value===''){
+        console.log('pressed')
+        product.forEach((Element)=>{
+            Element.style.display='block';
+        })
+    }
+})
