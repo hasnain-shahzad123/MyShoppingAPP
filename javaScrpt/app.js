@@ -224,9 +224,12 @@ function search(productName,InputKey){
         if(productName[productIndex]===InputKey[i]){
             productIndex++;
         }
-        if(productIndex==InputKey.length){
+        if(productIndex===InputKey.length){
             return true;
         }
+    }
+    if(productIndex===(productName.length/2)){
+        return true;
     }
     return false;
 }
@@ -240,6 +243,7 @@ let searchButton=document.querySelector('#searchButton')
 const product=document.querySelectorAll('.products')
 searchButton.addEventListener('click',()=>{
         let val=searchProduct.value;
+        if(val.length!=0){
         product.forEach((Element)=>{
         let item=Element.querySelector('.itemName').firstElementChild.textContent
         let shouldDisplay=search(item,val)
@@ -248,9 +252,9 @@ searchButton.addEventListener('click',()=>{
         }
         else{
         Element.style.display='none'; 
-        }
-        
+        }       
         })
+        }    
 })
 searchProduct.addEventListener('keyup',(event)=>{
     console.log('hello')

@@ -299,7 +299,7 @@ body{
 }
 .side{
     margin-top: 0px;
-    margin-bottom:50px ;
+    margin-bottom:10px ;
 }
 
 .profile-icon{
@@ -319,4 +319,82 @@ body{
     bottom: 3px;
     font-size: 20px;
    
+}
+
+
+/* //Making some things to be responsive */
+@media only screen and (max-width:765px){
+    .search{
+        left: -70px;
+        display: flex;
+        padding: 6px;
+        height: 40px;
+
+    }
+    .search input{
+        border-radius: 10px;
+        padding: 0px;
+        padding-left: 5px;
+        width: 140px;
+        position: relative;
+        right: 0px;
+    }
+    #companyL{
+        margin-right: 30px;
+        position: relative;
+        right: 50px;
+        width: 40px;
+        height: 20px;
+    }
+    .bi{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    .search button{
+        padding: 3px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 50%;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    .NavBar{
+        height: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width:515px){
+    .search{
+        left: -80px;
+        display: flex;
+        padding: 6px;
+        height: 35px;
+    }
+    .search input{
+        border-radius: 8px;
+        padding: 0px;
+        padding-left: 5px;
+        width: 140px;
+        position: relative;
+        right: 0px;
+    }
+    #companyL{
+        margin-right: 30px;
+        position: relative;
+        right: 40px;
+    }
+    .bi{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    .search button{
+        padding: 0px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 50%;
+        padding-bottom: 5px;
+        font-size: 15px;
+        margin-left: 5px;
+    }
 }
